@@ -1,0 +1,266 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Aapke Custom Colors ki Mapping */
+  --font-sans: var(--font-roboto), sans-serif;
+  --font-display: var(--font-roboto), sans-serif;
+
+  --color-saffron: var(--saffron);
+  --color-royal-blue: var(--royal-blue);
+  --color-gold: var(--gold);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-hover: var(--whatsapp-hover);
+  --color-background-light: var(--background-light);
+  --color-background-dark: var(--background-dark);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-success-green: var(--success-green);
+  --color-success-green-hover: var(--success-green-hover);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  /* --font-sans: var(--font-geist-sans); */
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px); /* 0.25rem approx */
+  --radius-md: calc(var(--radius) - 2px); /* 0.375rem approx */
+  --radius-lg: var(--radius); /* 0.5rem (Shadcn default) */
+  --radius-xl: 1rem; /* Aapki requirement: 1rem */
+  --radius-2xl: 1.5rem; /* Aapki requirement: 1.5rem */
+  --radius-3xl: 2rem; /* Aapki requirement: 2rem */
+  --radius-full: 9999px; /* Full round */
+
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+:root {
+  /* --radius: 0.625rem; */
+  --radius: 0.5rem;
+  --primary: #d00000;
+  --primary-hover: #b00000;
+
+  --secondary: #fdc500;
+  --secondary-hover: #f19e00;
+
+  --success-green: #15803d;
+  --success-green-hover: #166534;
+  --whatsapp: oklch(0.78 0.2 145); /* #25D366 */
+  --whatsapp-hover: #128c7e;
+  --background: #fffcf5;
+  --foreground: oklch(0.141 0.005 285.823);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.141 0.005 285.823);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.141 0.005 285.823);
+
+  /* custom */
+  --saffron: oklch(0.75 0.2 55); /* #FF9933 */
+  --royal-blue: oklch(0.3 0.15 260); /* #002366 */
+  --gold: oklch(0.75 0.12 85); /* #D4AF37 */
+  --background-light: oklch(0.98 0.01 70); /* #fcfaf8 */
+  --background-dark: oklch(0.18 0 0); /* #121212 */
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --accent: oklch(0.967 0.001 286.375);
+  --accent-foreground: oklch(0.21 0.006 285.885);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.92 0.004 286.32);
+  --input: oklch(0.92 0.004 286.32);
+  --ring: oklch(0.705 0.015 286.067);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.141 0.005 285.823);
+  --sidebar-primary: oklch(0.21 0.006 285.885);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.967 0.001 286.375);
+  --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
+  --sidebar-border: oklch(0.92 0.004 286.32);
+  --sidebar-ring: oklch(0.705 0.015 286.067);
+}
+
+.dark {
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.21 0.006 285.885);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.21 0.006 285.885);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.92 0.004 286.32);
+  --primary-foreground: oklch(0.21 0.006 285.885);
+  --secondary: oklch(0.274 0.006 286.033);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --accent: oklch(0.274 0.006 286.033);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.552 0.016 285.938);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.274 0.006 286.033);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.552 0.016 285.938);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  h1,
+  h2,
+  h3,
+  .font-sans {
+    /* font-family: var(--font-cormorant), serif !important; */
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: var(--font-weight-light);
+    @apply tracking-tight;
+  }
+  body {
+    font-family: var(--font-roboto), sans-serif;
+    @apply bg-background text-foreground;
+  }
+}
+@layer utilities {
+  .bg-theme-warm {
+    background-color: #f8f5f0;
+  }
+}
+
+.bg-royal-blue-gradient {
+  background: linear-gradient(135deg, #002366 0%, #001540 100%);
+}
+.bg-marigold-gradient {
+  background: linear-gradient(135deg, #f93 0%, #f4a825 100%);
+}
+.glass-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.dark .glass-header {
+  background: rgba(18, 18, 18, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.text-shadow-lg {
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+.max-w-container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: 1.5rem; /* 24px */
+  padding-right: 1.5rem; /* 24px */
+}
+.gradient-mesh {
+  background-color: #fffefa;
+  background-image:
+    radial-gradient(at 0% 0%, hsla(38, 100%, 94%, 1) 0, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(38, 40%, 90%, 1) 0, transparent 50%);
+}
+/* Tablet aur Mobile ke liye thoda space kam kar sakte hain */
+@media (max-width: 640px) {
+  .max-w-container {
+    padding-left: 1rem; /* 16px */
+    padding-right: 1rem;
+  }
+}
+.card-aspect {
+  aspect-ratio: 4/5;
+}
+.whatsapp-float:hover .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 60s linear infinite;
+}
+
+
+/* Infinite Marquee Animation */
+/* Left to Right */
+@keyframes marquee-ltr {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* Right to Left */
+@keyframes marquee-rtl {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ltr {
+  display: flex;
+  width: max-content;
+  animation: marquee-ltr 40s linear infinite;
+}
+
+.animate-rtl {
+  display: flex;
+  width: max-content;
+  animation: marquee-rtl 40s linear infinite;
+}
+
+/* Hover par pause (Premium touch) */
+.animate-ltr:hover, .animate-rtl:hover {
+  animation-play-state: paused;
+}
