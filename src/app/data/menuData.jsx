@@ -1,4 +1,5 @@
 export const menuData = [
+    { title: "Vastu", href: "/vastu", description: "" },
   {
     title: "Puja",
     href: "#",
@@ -118,6 +119,5 @@ export const menuData = [
     ],
   },
   { title: "Astrology", href: "/astrology", description: "" },
-  { title: "Vatu", href: "/vastu", description: "" },
   { title: "Contact", href: "/contact", description: "" },
 ];

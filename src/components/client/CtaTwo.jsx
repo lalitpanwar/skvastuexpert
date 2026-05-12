@@ -1,61 +1,185 @@
+import Link from "next/link";
 
-import { Phone, CalendarCheck } from "lucide-react";
 import Container from "./Container";
 
+import CustomButton from "@/components/ui/custom/CustomButton";
+import SectionLayout from "../ui/custom/section-layout";
+
 export default function CtaTwo({
-  title = "Book Pandit Ji for Shubh Puja",
-  description = "Transparent pricing • Vedic Vidhi • Certified Pandits for all your spiritual needs.",
-  primaryBtnText = "Book Now",
-  secondaryBtnText = "Call Pandit Ji",
-  phoneNumber = "+919876543210"
+  title = "Bring Peace, Prosperity & Positive Energy to Your Space",
+
+  description = "Get professional Vastu consultation for your home, office, plot or commercial property with practical remedies and accurate guidance.",
+
+  primaryBtnText = "Get Consultation",
+
+  primaryBtnLink = "/contact",
+
+  primaryBtnIcon,
+
+  secondaryBtnText = "Call Now",
+
+  secondaryBtnLink = "tel:+919876543210",
+
+  secondaryBtnIcon,
+
+  variant = "yellow",
+
+  secondaryVariant = "secondary",
+
+  className = "",
+
+  // BACKGROUND CUSTOMIZATION
+  bgClass = "bg-secondary/10",
+
+  glowClass = "bg-secondary/20",
+
+  secondGlowClass = "bg-primary/10",
+
+  patternColor = "#B48B3D",
 }) {
   return (
-    <section className="py-24">
-        
-      <Container>
-        <div className="bg-saffron/10 dark:bg-saffron/5 rounded-[40px] p-12 lg:p-20 relative overflow-hidden border border-saffron/10">
-          
-          {/* Decorative Dot Pattern Background */}
-          <div 
-            className="absolute top-0 left-0 w-full h-full opacity-[0.15] pointer-events-none"
+<SectionLayout>
+        <div
+          className={`
+            relative
+
+            overflow-hidden
+
+            rounded-[40px]
+
+            p-12 lg:p-20
+
+            border border-secondary/10
+
+            ${bgClass}
+          `}
+        >
+          {/* Decorative Pattern */}
+          <div
+            className="
+              absolute top-0 left-0
+              w-full h-full
+              opacity-[0.12]
+              pointer-events-none
+            "
             style={{
-              backgroundImage: `radial-gradient(circle, #B48B3D 1.5px, transparent 1.5px)`,
-              backgroundSize: '24px 24px'
+              backgroundImage: `radial-gradient(circle, ${patternColor} 1.5px, transparent 1.5px)`,
+
+              backgroundSize: "24px 24px",
             }}
-          ></div>
+          />
 
-          {/* Glowing Aura Effect */}
-          <div className="absolute -top-24 -right-24 w-64 h-64 bg-saffron/20 blur-[100px] rounded-full"></div>
-          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-saffron/20 blur-[100px] rounded-full"></div>
+          {/* Glow Effects */}
+          <div
+            className={`
+              absolute -top-24 -right-24
+              w-64 h-64
+              blur-[100px]
+              rounded-full
 
+              ${glowClass}
+            `}
+          />
+
+          <div
+            className={`
+              absolute -bottom-24 -left-24
+              w-64 h-64
+              blur-[100px]
+              rounded-full
+
+              ${secondGlowClass}
+            `}
+          />
+
+          {/* CONTENT */}
           <div className="relative z-10 text-center">
-            <h2 className="text-4xl lg:text-6xl font-sans  text-royal-blue dark:text-white mb-8 leading-tight">
-              {title}
-            </h2>
             
-            <p className="text-xl text-gray-600 dark:text-zinc-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            {/* TITLE */}
+            <h3
+              className="
+                text-3xl md:text-4xl
+
+                font-sans
+
+                text-slate-900
+                dark:text-white
+
+                mb-8
+
+                leading-tight
+              "
+            >
+              {title}
+            </h3>
+
+            {/* DESCRIPTION */}
+            <p
+              className="
+                text-xl
+
+                text-slate-600
+                dark:text-zinc-400
+
+                mb-12
+
+                max-w-2xl
+
+                mx-auto
+
+                font-light
+
+                leading-relaxed
+              "
+            >
               {description}
             </p>
 
-            <div className="flex flex-wrap justify-center gap-6">
-              {/* Primary Action */}
-              <button className="bg-saffron text-royal-blue px-10 py-5 rounded-2xl  hover:shadow-[0_20px_40px_rgba(180,139,61,0.3)] hover:-translate-y-1 transition-all duration-300 text-lg flex items-center gap-2 cursor-pointer">
-                <CalendarCheck size={22} />
-                {primaryBtnText}
-              </button>
+            {/* BUTTONS */}
+            <div
+              className="
+                flex flex-wrap
 
-              {/* Secondary Action */}
-              <a 
-                href={`tel:${phoneNumber}`}
-                className="bg-white dark:bg-zinc-900 text-royal-blue dark:text-white border border-saffron/20 px-10 py-5 rounded-2xl  hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all duration-300 text-lg shadow-sm flex items-center gap-2 cursor-pointer"
-              >
-                <Phone size={20} className="text-saffron" />
-                {secondaryBtnText}
-              </a>
+                justify-center
+
+                gap-6
+              "
+            >
+              {/* PRIMARY BUTTON */}
+              {primaryBtnText && (
+                <Link
+                  href={primaryBtnLink}
+                  className="group"
+                >
+                  <CustomButton
+                    variant={variant}
+                    icon={primaryBtnIcon}
+                    iconSide="right"
+className="w-full rounded-full pointer-events-none" 
+                  >
+                    {primaryBtnText}
+                  </CustomButton>
+                </Link>
+              )}
+
+              {/* SECONDARY BUTTON */}
+              {secondaryBtnText && (
+                <Link
+                  href={secondaryBtnLink}
+                  className="group"
+                >
+                  <CustomButton
+                    variant={secondaryVariant}
+                    icon={secondaryBtnIcon}
+className="w-full rounded-full pointer-events-none" 
+                  >
+                    {secondaryBtnText}
+                  </CustomButton>
+                </Link>
+              )}
             </div>
           </div>
         </div>
-      </Container>
-    </section>
+</SectionLayout>
   );
 }

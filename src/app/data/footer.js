@@ -4,7 +4,7 @@ export const footerData = {
   about: {
     name: "Shivkumar",
     surname: "Sharma",
-    description: "Authentic Vedic rituals and spiritual guidance by Acharya Shivkumar Sharma. Bringing the sacred traditions of Kashi to families across Ghaziabad and NCR.",
+    description: "Professional Vastu consultation and practical guidance by Acharya Shivkumar Sharma. Helping homes, offices and commercial spaces achieve balance, positivity and prosperity across Ghaziabad & NCR.",
     logoIconColor: "#d9a01a",
   },
   services: {
@@ -42,7 +42,7 @@ export const footerData = {
   },
   contact: {
     address: "Shiv Shankar Jyotish Kendra, Raj Nagar, Ghaziabad, UP 201001",
-    phone: "+91 99XXXXXX00",
+    phone: "+91 9811893069",
     email: "contact@shivkumarsharma.com",
     mapLink: "https://maps.google.com/?q=Raj+Nagar+Ghaziabad",
   },

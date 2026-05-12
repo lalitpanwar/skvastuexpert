@@ -25,7 +25,7 @@ export default function ProductCard({
   mobileCols = 2,
   className = '',
   buttonText = "Book a Pandit",
-  variant= "yellow"
+  variant= "primary"
 }) {
   const desktopBasis = {
     3: "lg:basis-1/3",

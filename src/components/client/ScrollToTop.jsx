@@ -1,5 +1,7 @@
 "use client";
+
 import { useEffect, useState } from "react";
+
 import { ArrowUp } from "lucide-react";
 
 export default function ScrollToTop() {
@@ -7,7 +9,6 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      // window.scrollY use karna zyada modern hai pageYOffset se
       if (window.scrollY > 300) {
         setIsVisible(true);
       } else {
@@ -16,7 +17,9 @@ export default function ScrollToTop() {
     };
 
     window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
+
+    return () =>
+      window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
@@ -27,18 +30,47 @@ export default function ScrollToTop() {
   };
 
   return (
-
-    <div className="fixed bottom-8 right-8 z-[99]">
+    <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[99]">
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="bg-saffron text-royal-blue p-3 rounded-full shadow-2xl shadow-saffron/40 hover:bg-white hover:text-royal-blue transition-all duration-300 hover:-translate-y-2 active:scale-95 border-2 border-saffron group cursor-pointer flex items-center justify-center"
           aria-label="Back to top"
+          className="
+            group
+
+            flex items-center justify-center
+
+            w-14 h-14
+
+            rounded-full
+
+            bg-primary
+
+            text-white
+
+            shadow-[0_20px_40px_rgba(208,0,0,0.35)]
+
+            border-2 border-white/20
+
+            hover:bg-primary-hover
+
+            hover:-translate-y-2
+
+            active:scale-95
+
+            transition-all duration-300
+
+            cursor-pointer
+          "
         >
-          <ArrowUp 
-            size={24} 
-            strokeWidth={3} 
-            className="group-hover:animate-bounce transition-transform" 
+          <ArrowUp
+            size={24}
+            strokeWidth={3}
+            className="
+              transition-transform duration-300
+
+              group-hover:-translate-y-1
+            "
           />
         </button>
       )}

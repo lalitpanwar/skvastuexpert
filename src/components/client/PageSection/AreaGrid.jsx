@@ -4,6 +4,8 @@ import { MapPin, Building2, Map, Phone, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import CustomButton from "@/components/ui/custom/CustomButton"; 
 import TitleBorder from "@/components/ui/custom/TitleBorder";
+import { createWhatsAppLink, createCallLink } from "@/lib";
+
 const iconMap = {
   ghaziabad: MapPin,
   noida: Building2,
@@ -55,28 +57,30 @@ export default function AreaGrid({ title, subtitle, variant, bgColor, areas }) {
     {/* SEO Trust Banner - Styled with Theme */}
     <div className="w-full max-w-5xl mx-auto bg-secondary/5 dark:bg-white/5 shadow-inner rounded-[2rem] p-8 text-center mt-16 border border-secondary/20">
       <p className="font-serif italic text-xl md:text-2xl text-slate-700 dark:text-zinc-300 mb-3">
-        "For all major locations in Ghaziabad, Pandit Ji can reach your venue within 30-60 minutes."
+           "Professional Vastu consultation is available across
+    Ghaziabad, Noida & NCR for homes, offices, plots
+    and commercial spaces."
       </p>
       <TitleBorder classes="mx-auto mb-4" />
       <p className="uppercase tracking-[0.25em] text-[10px] md:text-xs text-primary font-bold">
-        Leading Vedic Pandit for Grah Pravesh in Ghaziabad
+         Trusted Vastu Consultant in Ghaziabad & NCR
       </p>
     </div>
 
     {/* Action Buttons - Using your Theme Buttons */}
     <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
-      <Link href="/book-a-pandit" className="group min-w-[200px]">
+      <Link href={createCallLink()} className="group min-w-[200px]">
         <CustomButton 
           variant="primary" 
           className="w-full py-4 rounded-full pointer-events-none" 
           icon={Phone}
         >
-          Book Now
+          Book Vastu Consultation
         </CustomButton>
       </Link>
 
       <Link 
-        href={`https://wa.me/${whatsappNo}`} 
+        href={createWhatsAppLink("professional Vastu consultation")}
         target="_blank"
         className="group min-w-[200px]"
       >

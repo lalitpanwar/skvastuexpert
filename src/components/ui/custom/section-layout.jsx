@@ -20,14 +20,14 @@ const SectionLayout = ({
       className={cn("py-20  overflow-hidden", bgColor, className)}
     >
       <Container>
-        <SectionHeader
+       {title && <SectionHeader
           title={title}
           subtitle={subtitle}
           variant={variant}
           light={light}
           seeMoreLink={seeMoreLink}
           seeMoreText={seeMoreText}
-        />
+        /> }
         {children}
       </Container>
     </section>

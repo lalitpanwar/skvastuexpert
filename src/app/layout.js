@@ -3,7 +3,7 @@ import "./globals.css";
 import MainHeader from "@/components/shared/MainHeader";
 import MainFooter from "@/components/shared/MainFooter";
 import ScrollToTop from '@/components/client/ScrollToTop';
-
+import SmoothScroll from '@/components/shared/SmoothScroll';
 const roboto = Roboto({
   subsets: ['latin'],
   weight: ['100', '300', '400', '500', '700', '900'], 
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <body
         className= {`bg-white dark:bg-background-dark font-sans text-[#1c160d] dark:text-white  antialiased`}
       >
-        
+          <SmoothScroll />
                <MainHeader/>
                <main> 
                {children}

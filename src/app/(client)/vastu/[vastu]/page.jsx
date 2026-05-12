@@ -1,5 +1,5 @@
 import AcharyaProfile from "@/components/client/AcharyaProfile"
-import FAQ from "@/components/client/FAQ"
+import FAQ from "@/components/client/FAQSection"
 import ConsultantProfile from "@/components/client/PageSection/ConsultantProfile"
 import ConsultationHero from "@/components/client/PageSection/ConsultationHero"
 import DeepDiveSection from "@/components/client/PageSection/DeepDiveSection"

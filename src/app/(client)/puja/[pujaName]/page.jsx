@@ -1,8 +1,8 @@
-import { pujaData } from "@/app/data/puja/pujaData";
+import { pujaData } from "@/app/data/pujaData";
 import AcharyaProfile from "@/components/client/AcharyaProfile";
 import Breadcrumb from "@/components/client/Breadcrumb";
 import CtaTwo from "@/components/client/CtaTwo";
-import FAQ from "@/components/client/FAQ";
+import FAQ from "@/components/client/FAQSection";
 import ImageCarousel from "@/components/client/PageSection/ImageCarousel";
 import PujaChecklist from "@/components/client/PageSection/PujaChecklist";
 import RelatedGrid from "@/components/client/PageSection/RelatedGrid";

@@ -33,6 +33,12 @@ const variants = {
     "group-hover:bg-success-green group-hoverd:text-white group-hover:border-transparent"
   ),
 
+    outlineSecondary: cn(
+    "bg-white/50 text-secondary border-2 border-secondary/30",
+    "hover:bg-secondary hover:text-white hover:shadow-md",
+    "group-hover:bg-secondary group-hoverd:text-white group-hover:border-transparent"
+  ),
+
   whatsapp: cn(
     "bg-whatsapp text-white border-transparent",
     "group-hover:bg-whatsapp-hover group-hover:shadow-xl group-hover:shadow-whatsapp/30",
