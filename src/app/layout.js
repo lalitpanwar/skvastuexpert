@@ -14,6 +14,9 @@ const roboto = Roboto({
 export const metadata = {
   title: "Shiv Kumar Sharma",
   description: "Vastu Consultant in Rajnagar Ghaziabad",
+    verification: {
+    google: "ljy5nc5CmbF3vDujb6rfutmp2yfllTtYc416I6S1mOg",
+  },
 };
 
 export default function RootLayout({ children }) {
