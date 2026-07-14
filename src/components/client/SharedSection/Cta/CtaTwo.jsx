@@ -1,9 +1,8 @@
 import Link from "next/link";
 
-import Container from "./layout/Container";
 
 import CustomButton from "@/components/client/Layout/CustomButton";
-import SectionLayout from "../ui/custom/section-layout";
+import { SectionLayout } from "../../Layout";
 
 export default function CtaTwo({
   title = "Bring Peace, Prosperity & Positive Energy to Your Space",
