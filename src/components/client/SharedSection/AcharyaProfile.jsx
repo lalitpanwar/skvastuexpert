@@ -9,9 +9,9 @@ import {
   MessageCircle, 
   CalendarCheck 
 } from "lucide-react";
-import Container from "./Container";
+import Container from "../Layout/Container";
 import Link from "next/link";
-import CustomButton from "../ui/custom/CustomButton";
+import CustomButton from "../Layout/CustomButton";
 
 export default function AcharyaProfile({
   image = "/images/acharya-shivkumar-sharma.jpg",

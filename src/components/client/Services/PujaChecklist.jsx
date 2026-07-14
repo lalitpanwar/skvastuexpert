@@ -1,5 +1,5 @@
 import { ShoppingBag, UserCheck, PackageCheck, Handshake } from "lucide-react";
-import Container from "../Container";
+import Container from "../Layout/Container";
 
 export default function PujaChecklist({
   providedItems = [

@@ -9,9 +9,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import Container from "@/components/client/Container";
+import Container from "@/components/client/Layout/Container";
 
-import TitleBorder from "@/components/ui/custom/TitleBorder";
+import TitleBorder from "@/components/client/Layout/TitleBorder";
 
 export default function FAQSection({
   title = "Frequently Asked Questions",

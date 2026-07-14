@@ -1,4 +1,4 @@
-import Container from "../Container";
+import Container from "../Layout/Container";
 
 export default function ImageCarousel({ 
  title = "Moments of Divine Rituals",

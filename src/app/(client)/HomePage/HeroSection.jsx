@@ -1,9 +1,9 @@
 "use client";
 
-import Container from "@/components/client/Container";
+import Container from "@/components/client/Layout/Container";
 import Link from "next/link";
 import Image from "next/image";
-import CustomButton from "@/components/ui/custom/CustomButton";
+import CustomButton from "@/components/client/Layout/CustomButton";
 import { createWhatsAppLink } from "@/lib";
 import {
   Compass,
@@ -14,7 +14,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-export default function TestHome() {
+export default function HeroSection() {
   return (
     <section
       className="relative bg-[#fffcf5] pt-28 md:pt-36 pb-10 overflow-hidden"

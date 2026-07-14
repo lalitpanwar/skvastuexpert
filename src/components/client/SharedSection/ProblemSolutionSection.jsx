@@ -1,6 +1,6 @@
-import SectionLayout from "@/components/ui/custom/section-layout";
-import CustomButton from "@/components/ui/custom/CustomButton";
-import TitleBorder from "@/components/ui/custom/TitleBorder";
+import SectionLayout from "@/components/client/Layout/SectionLayout";
+import CustomButton from "@/components/client/Layout/CustomButton";
+import TitleBorder from "@/components/client/Layout/TitleBorder";
 
 import Link from "next/link";
 

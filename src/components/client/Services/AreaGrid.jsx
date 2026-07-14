@@ -1,9 +1,9 @@
 "use client";
-import SectionLayout from "@/components/ui/custom/section-layout";
+import SectionLayout from "@/components/client/Layout/SectionLayout";
 import { MapPin, Building2, Map, Phone, MessageCircle } from "lucide-react";
 import Link from "next/link";
-import CustomButton from "@/components/ui/custom/CustomButton"; 
-import TitleBorder from "@/components/ui/custom/TitleBorder";
+import CustomButton from "@/components/client/Layout/CustomButton"; 
+import TitleBorder from "@/components/client/Layout/TitleBorder";
 import { createWhatsAppLink, createCallLink } from "@/lib";
 
 const iconMap = {

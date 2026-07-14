@@ -14,7 +14,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import SectionLayout from "@/components/ui/custom/section-layout";
+import SectionLayout from "@/components/client/Layout/SectionLayout";
 
 import { cn } from "@/lib/utils";
 

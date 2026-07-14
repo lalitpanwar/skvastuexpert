@@ -9,10 +9,10 @@ import {
 } from "@/components/ui/carousel";
 import { ArrowRight, IndianRupee } from "lucide-react";
 import Link from "next/link";
-import SectionLayout from "../ui/custom/section-layout";
+import SectionLayout from "../Layout/SectionLayout";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import CustomButton from "../ui/custom/CustomButton";
+import CustomButton from "../Layout/CustomButton";
 
 export default function ProductCarousel({
   items = [],

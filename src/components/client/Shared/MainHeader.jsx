@@ -4,13 +4,11 @@ import React, { useEffect, useState } from "react";
 
 import { Compass, Phone, Menu, Sparkles } from "lucide-react";
 
-import Container from "../client/Container";
-
-import Navigation from "./Navigation";
-
+import Container from "../Layout/Container";
+import { Navigation } from ".";
 import Link from "next/link";
 
-import CustomButton from "../ui/custom/CustomButton";
+import { CustomButton } from "../Layout";
 import { createCallLink } from "@/lib";
 export default function MainHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,7 +31,7 @@ export default function MainHeader() {
 
   return (
     <header
-      className={`
+      className={` flex
         fixed top-0 left-0 right-0
 
         z-[100]
@@ -45,7 +43,7 @@ export default function MainHeader() {
         ${isScrolled ? "glass-header" : "bg-white dark:bg-zinc-900"}
       `}
     >
-      <Container max="w-full" classes="py-4 flex items-center justify-between">
+      <Container max="w-full" className="py-4 flex items-center justify-between">
         {/* LOGO */}
         <Link
           href="/"

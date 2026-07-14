@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Phone, Verified, Sparkles, Box, CheckCircle2 } from "lucide-react";
-import Container from "../Container";
+import Container from "../Layout/Container";
 import Booking from "@/app/(client)/booking/page";
 
 export default function ServiceHero({

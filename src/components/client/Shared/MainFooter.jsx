@@ -2,27 +2,16 @@
 
 import React from "react";
 
-import {
-  Compass,
-  Phone,
-  Mail,
-  MapPin,
-} from "lucide-react";
+import { Compass, Phone, Mail, MapPin } from "lucide-react";
 
 import Link from "next/link";
 
-import Container from "@/components/client/Container";
+import { Container } from "../Layout";
 
-import { footerData } from "@/app/data/footer";
+import { footerData } from "@/data/footer";
 
 export default function MainFooter() {
-  const {
-    about,
-    services,
-    contact,
-    socials,
-    legal,
-  } = footerData;
+  const { about, services, contact, socials, legal } = footerData;
 
   return (
     <footer
@@ -77,10 +66,8 @@ export default function MainFooter() {
         >
           {/* BRAND */}
           <div className="flex flex-col gap-8">
-            
             {/* LOGO */}
             <div className="flex items-center gap-4">
-              
               <div
                 className="
                   relative
@@ -129,9 +116,7 @@ export default function MainFooter() {
               >
                 {about.name}
 
-                <span className="text-primary">
-                  {about.surname}
-                </span>
+                <span className="text-primary">{about.surname}</span>
               </Link>
             </div>
 
@@ -152,14 +137,13 @@ export default function MainFooter() {
 
             {/* SOCIALS */}
             <div className="flex gap-3">
-              {socials.map(
-                ({ Icon, link }, i) => (
-                  <a
-                    key={i}
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
+              {socials.map(({ Icon, link }, i) => (
+                <a
+                  key={i}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
                       size-11
 
                       rounded-full
@@ -180,17 +164,15 @@ export default function MainFooter() {
 
                       transition-all duration-300
                     "
-                  >
-                    <Icon size={17} />
-                  </a>
-                )
-              )}
+                >
+                  <Icon size={17} />
+                </a>
+              ))}
             </div>
           </div>
 
           {/* SERVICES */}
           <div className="flex flex-col gap-8">
-            
             <h4
               className="
                 text-sm
@@ -289,7 +271,6 @@ export default function MainFooter() {
             </h4>
 
             <div className="space-y-7">
-              
               {/* ADDRESS */}
               <a
                 href={contact.mapLink}
@@ -443,10 +424,7 @@ export default function MainFooter() {
               list: services.quickLinks,
             },
           ].map((sec, i) => (
-            <div
-              key={i}
-              className="space-y-4"
-            >
+            <div key={i} className="space-y-4">
               <p
                 className="
                   text-[10px]
@@ -464,13 +442,11 @@ export default function MainFooter() {
               </p>
 
               <div className="flex flex-col gap-2">
-                {sec.list
-                  .slice(0, 4)
-                  .map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="
+                {sec.list.slice(0, 4).map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="
                         text-sm
 
                         text-white/50
@@ -479,10 +455,10 @@ export default function MainFooter() {
 
                         transition-colors
                       "
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
               </div>
             </div>
           ))}
@@ -509,9 +485,8 @@ export default function MainFooter() {
           "
         >
           <p>
-            © {new Date().getFullYear()}{" "}
-            {about.name} {about.surname}
-            • Vastu Consultation Services
+            © {new Date().getFullYear()} {about.name} {about.surname}• Vastu
+            Consultation Services
           </p>
 
           <div className="flex gap-6">

@@ -1,13 +1,13 @@
-import { pujaData } from "@/app/data/pujaData";
-import AcharyaProfile from "@/components/client/AcharyaProfile";
-import Breadcrumb from "@/components/client/Breadcrumb";
+import { pujaData } from "@/data/pujaData";
+import AcharyaProfile from "@/components/client/SharedSection/AcharyaProfile";
+import Breadcrumb from "@/components/client/Layout/Breadcrumb";
 import CtaTwo from "@/components/client/CtaTwo";
-import FAQ from "@/components/client/FAQSection";
+import FAQ from "@/components/client/SharedSection/FAQSection";
 import ImageCarousel from "@/components/client/PageSection/ImageCarousel";
-import PujaChecklist from "@/components/client/PageSection/PujaChecklist";
-import RelatedGrid from "@/components/client/PageSection/RelatedGrid";
-import ServiceContent from "@/components/client/PageSection/ServiceContent";
-import ServiceHero from "@/components/client/PageSection/ServiceHero";
+import PujaChecklist from "@/components/client/Services/PujaChecklist";
+import RelatedGrid from "@/components/client/Services/RelatedGrid";
+import ServiceContent from "@/components/client/Services/ServiceContent";
+import ServiceHero from "@/components/client/Services/ServiceHero";
 
 export default async function PujaPage({ params }) {
   const { pujaName } = await params;

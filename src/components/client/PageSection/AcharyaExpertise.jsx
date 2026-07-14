@@ -1,6 +1,6 @@
 "use client";
 
-import Container from "@/components/client/Container";
+import Container from "@/components/client/Layout/Container";
 
 import {
   Compass,
@@ -12,7 +12,7 @@ import {
 
 import Link from "next/link";
 
-import CustomButton from "@/components/ui/custom/CustomButton";
+import CustomButton from "@/components/client/Layout/CustomButton";
 
 export default function AcharyaExpertise({
   badgeText = "Vastu",

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import Container from "./Container"; 
-import { SectionHeader } from "./section-header";
+import { SectionHeader } from ".";
 
 const SectionLayout = ({
   children,

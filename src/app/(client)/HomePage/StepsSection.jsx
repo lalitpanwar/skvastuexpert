@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import Container from "@/components/client/Container";
+import Container from "@/components/client/Layout/Container";
 import { BookOpen, CalendarCheck, ShieldCheck, ChevronRight } from "lucide-react";
-import TitleBorder from "@/components/ui/custom/TitleBorder";
+import TitleBorder from "@/components/client/Layout/TitleBorder";
 
 export default function StepsSection() {
   const steps = [

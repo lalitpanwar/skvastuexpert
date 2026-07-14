@@ -2,9 +2,9 @@ import React from "react";
 
 import Link from "next/link";
 
-import SectionLayout from "@/components/ui/custom/section-layout";
+import SectionLayout from "@/components/client/Layout/SectionLayout";
 
-import CustomButton from "@/components/ui/custom/CustomButton";
+import CustomButton from "@/components/client/Layout/CustomButton";
 
 export default function CTAOne({
   title = "Ready to Bring Peace, Prosperity & Positive Energy to Your Space?",

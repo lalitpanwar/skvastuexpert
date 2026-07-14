@@ -1,6 +1,6 @@
-import SectionLayout from "@/components/ui/custom/section-layout";
-import ProductCarousel from "@/components/client/ProductCarousel";// Jo aapne banaya tha
-import { pujaData } from "@/app/data/pujaData";
+import SectionLayout from "@/components/client/Layout/SectionLayout";
+import ProductCarousel from "@/components/client/Shop/ProductCarousel";// Jo aapne banaya tha
+import { pujaData } from "@/data/pujaData";
 export default function Astrology() {
   return (
     <main>

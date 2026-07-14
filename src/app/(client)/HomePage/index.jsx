@@ -1,21 +1,20 @@
-import ProductCarousel from "@/components/client/ProductCarousel";
+import { SectionIntro } from "@/components/client/Layout";
 import HeroSection from "./HeroSection";
-import Acharya from "./Acharya";
-import StepsSection from "./StepsSection";
-import FAQSection from "@/components/client/FAQSection";
-import CTAOne from "@/components/client/CtaOne";
-import { pujaData, servicesData } from "@/app/data";
-import AreaGrid from "@/components/client/PageSection/AreaGrid";
-import ProductCard from "@/components/client/ProductCard";
-import AcharyaExpertise from "@/components/client/PageSection/AcharyaExpertise";
+import { AreaGrid, ServiceCard} from "@/components/client/Services";
+import { FAQSection, ProblemSolutionSection } from "@/components/client/SharedSection";
+
 import FeaturedIn from "@/components/client/PageSection/FeaturedIn";
-import ServiceGrid from "@/components/client/ServiceCard";
-import SectionIntro from "@/components/client/SectionIntro";
-import CtaTwo from "@/components/client/CtaTwo";
-import ProblemSolutionSection from "@/components/client/ProblemSolutionSection";
-import { vastuFaqs, testimonialsData } from "@/app/data";
 import TestimonialSection from "@/components/client/PageSection/TestimonalSection";
+import CTAOne from "@/components/client/SharedSection/Cta/CtaOne";
+import ConsultantProfile from "@/components/client/PageSection/ConsultantProfile";
+import { servicesData, testimonialsData, vastuFaqs } from "@/data";
 import { createWhatsAppLink } from "@/lib";
+import AcharyaExpertise from "@/components/client/PageSection/AcharyaExpertise";
+import Acharya from "./Acharya_forpuja";
+
+
+
+
 
 export default function HomePage() {
   const rituals = [
@@ -61,17 +60,17 @@ export default function HomePage() {
   ];
   return (
     <>
-      <HeroSection />
-      <SectionIntro />
-<ServiceGrid items={servicesData}/>
+     <HeroSection />
+    <SectionIntro />
+<ServiceCard items={servicesData}/>
 <ProblemSolutionSection variant="center" bgColor="bg-amber-50"/>
 
 
-  <AcharyaExpertise />
+<AcharyaExpertise />
   
 <FeaturedIn className="border-b border-slate-100" />
-      <AreaGrid
-  title="Vastu Consultation Services Across Ghaziabad & NCR"
+      <AreaGrid 
+        title="Vastu Consultation Services Across Ghaziabad & NCR"
 
   subtitle="Get professional Vastu consultation for homes, offices, plots & commercial spaces with practical guidance and accurate remedies."
 
@@ -96,7 +95,7 @@ export default function HomePage() {
 
   bgClass="bg-theme-warm"
 />
-      <CTAOne buttonLink={createWhatsAppLink("professional Vastu consultation")} />
+      <CTAOne  buttonLink={createWhatsAppLink("professional Vastu consultation")} />
 
     </>
   );

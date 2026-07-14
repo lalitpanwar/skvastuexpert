@@ -10,9 +10,9 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-import SectionLayout from "@/components/ui/custom/section-layout";
-import Container from "@/components/client/Container";
-import CustomButton from "@/components/ui/custom/CustomButton";
+import SectionLayout from "@/components/client/Layout/SectionLayout";
+import Container from "@/components/client/Layout/Container";
+import CustomButton from "@/components/client/Layout/CustomButton";
 
 import {
   createWhatsAppLink,

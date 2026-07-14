@@ -1,9 +1,9 @@
 "use client";
 
-import Container from "@/components/client/Container";
+import Container from "@/components/client/Layout/Container";
 import Link from "next/link";
 import Image from "next/image";
-import CustomButton from "@/components/ui/custom/CustomButton";
+import CustomButton from "@/components/client/Layout/CustomButton";
 
 import {
   Compass,

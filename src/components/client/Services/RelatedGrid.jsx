@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Container from "../Container"; // Aapka reusable container
+import Container from "../Layout/Container"; // Aapka reusable container
 import { ArrowRight } from "lucide-react";
 
 export default function RelatedGrid({

@@ -1,4 +1,4 @@
-import Container from "../Container";
+import Container from "../Layout/Container";
 
 export default function ServiceContent({ 
   importanceTitle = "Importance of Puja (Mahatva)", 

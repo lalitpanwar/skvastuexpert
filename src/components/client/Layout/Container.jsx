@@ -1,3 +1,4 @@
+"use client";
 import { cn } from "@/lib/utils";
 
 const Container = ({ children, className = "", max = "max-w-7xl" }) => {
@@ -9,3 +10,4 @@ const Container = ({ children, className = "", max = "max-w-7xl" }) => {
 };
 
 export default Container;
+

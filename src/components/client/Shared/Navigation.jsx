@@ -13,7 +13,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader } from "@/components/ui/sheet";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button"
-import { menuData } from "@/app/data/menuData";
+import { menuData } from "@/data/menuData";
 import { ChevronDown, Menu } from "lucide-react";
 import { useState } from "react";
 export default function Navigation ({ open, setOpen }) {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export const SectionHeader = ({
+ const SectionHeader = ({
   title,
   subtitle,
   variant = "left",
@@ -73,3 +73,5 @@ export const SectionHeader = ({
     </div>
   );
 };
+
+export default SectionHeader;

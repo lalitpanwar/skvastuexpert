@@ -1,11 +1,11 @@
-import ProductCarousel from "@/components/client/ProductCarousel";
+import ProductCarousel from "@/components/client/Shop/ProductCarousel";
 import HeroSection from "./HeroSection";
-import Acharya from "./Acharya";
+import Acharya from "./Acharya_forpuja";
 import StepsSection from "./StepsSection";
-import FAQ from "@/components/client/FAQSection";
-import CTAOne from "@/components/client/CtaOne";
-import { pujaData } from "@/app/data/pujaData";
-import AreaGrid from "@/components/client/PageSection/AreaGrid";
+import FAQ from "@/components/client/SharedSection/FAQSection";
+import CTAOne from "@/components/client/SharedSection/Cta/CtaOne";
+import { pujaData } from "@/data/pujaData";
+import AreaGrid from "@/components/client/Services/AreaGrid";
 import ProductCard from "@/components/client/ProductCard";
 import AcharyaExpertise from "@/components/client/PageSection/AcharyaExpertise";
 import FeaturedIn from "@/components/client/PageSection/FeaturedIn";

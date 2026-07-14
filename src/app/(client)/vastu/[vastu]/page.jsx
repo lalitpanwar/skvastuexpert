@@ -1,10 +1,10 @@
-import AcharyaProfile from "@/components/client/AcharyaProfile"
-import FAQ from "@/components/client/FAQSection"
+import AcharyaProfile from "@/components/client/SharedSection/AcharyaProfile"
+import FAQ from "@/components/client/SharedSection/FAQSection"
 import ConsultantProfile from "@/components/client/PageSection/ConsultantProfile"
 import ConsultationHero from "@/components/client/PageSection/ConsultationHero"
-import DeepDiveSection from "@/components/client/PageSection/DeepDiveSection"
+import DeepDiveSection from "@/components/client/Services/DeepDiveSection"
 import ImageCarousel from "@/components/client/PageSection/ImageCarousel"
-import ServiceGrid from "@/components/client/PageSection/ServiceGrid"
+import ServiceGrid from "@/components/client/Services/ServiceGrid"
 
 export default function VastuPage(){
 
