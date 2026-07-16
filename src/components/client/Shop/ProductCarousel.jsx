@@ -12,7 +12,7 @@ import Link from "next/link";
 import SectionLayout from "../Layout/SectionLayout";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import CustomButton from "../Layout/CustomButton";
+import CustomButton from "../../ui/custom/CustomButton";
 
 export default function ProductCarousel({
   items = [],

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import SectionLayout from "@/components/client/Layout/SectionLayout";
 
-import CustomButton from "@/components/client/Layout/CustomButton";
+import CustomButton from "@/components/ui/custom/CustomButton";
 
 export default function CTAOne({
   title = "Ready to Bring Peace, Prosperity & Positive Energy to Your Space?",

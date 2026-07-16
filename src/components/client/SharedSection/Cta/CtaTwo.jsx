@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 
-import CustomButton from "@/components/client/Layout/CustomButton";
+import CustomButton from "@/components/ui/custom/CustomButton";
 import { SectionLayout } from "../../Layout";
 
 export default function CtaTwo({

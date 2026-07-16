@@ -3,7 +3,7 @@
 import Container from "@/components/client/Layout/Container";
 import Link from "next/link";
 import Image from "next/image";
-import CustomButton from "@/components/client/Layout/CustomButton";
+import CustomButton from "@/components/ui/custom/CustomButton";
 import { createWhatsAppLink } from "@/lib";
 import {
   Compass,
@@ -17,7 +17,7 @@ import {
 export default function HeroSection() {
   return (
     <section
-      className="relative bg-[#fffcf5] pt-28 md:pt-36 pb-10 overflow-hidden"
+      className="relative bg-[#fffcf5] pt-15 pb-10 overflow-hidden"
       style={{
         backgroundImage: "url('/images/white-patternchakra.png')",
 

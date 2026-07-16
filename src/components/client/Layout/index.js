@@ -1,6 +1,6 @@
-export { default as Breadcrumb } from "./Breadcrumb";
+export { default as Breadcrumb } from "./Breadcrumb_old";
 export { default as Container } from "./Container";
-export { default as CustomButton }from "./CustomButton";
+export { default as CustomButton }from "../../ui/custom/CustomButton";
 export { default as SectionHeader } from "./SectionHeader";
 export { default as SectionLayout } from "./SectionLayout";
 export { default as TitleBorder } from "./TitleBorder";

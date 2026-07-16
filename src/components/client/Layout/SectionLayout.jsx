@@ -7,7 +7,7 @@ const SectionLayout = ({
   title,
   subtitle,
   variant = "left",
-  bgColor = "bg-white",
+  bgColor = "",
   light = false,
   seeMoreLink,
   seeMoreText,

@@ -1,19 +1,17 @@
 import { SectionIntro } from "@/components/client/Layout";
 import HeroSection from "./HeroSection";
-import { AreaGrid, ServiceCard} from "@/components/client/Services";
-import { FAQSection, ProblemSolutionSection } from "@/components/client/SharedSection";
+import { AreaGrid, ServiceCard } from "@/components/client/Services";
+import {
+  FAQSection,
+  ProblemSolutionSection,
+} from "@/components/client/SharedSection";
 
 import FeaturedIn from "@/components/client/PageSection/FeaturedIn";
 import TestimonialSection from "@/components/client/PageSection/TestimonalSection";
 import CTAOne from "@/components/client/SharedSection/Cta/CtaOne";
-import ConsultantProfile from "@/components/client/PageSection/ConsultantProfile";
 import { servicesData, testimonialsData, vastuFaqs } from "@/data";
 import { createWhatsAppLink } from "@/lib";
 import AcharyaExpertise from "@/components/client/PageSection/AcharyaExpertise";
-import Acharya from "./Acharya_forpuja";
-
-
-
 
 
 export default function HomePage() {
@@ -60,43 +58,42 @@ export default function HomePage() {
   ];
   return (
     <>
-     <HeroSection />
-    <SectionIntro />
-<ServiceCard items={servicesData}/>
-<ProblemSolutionSection variant="center" bgColor="bg-amber-50"/>
+      <HeroSection />
+      <SectionIntro />
+      <ServiceCard items={servicesData} />
+      <ProblemSolutionSection variant="center" bgColor="bg-amber-50" />
 
+      <AcharyaExpertise />
 
-<AcharyaExpertise />
-  
-<FeaturedIn className="border-b border-slate-100" />
-      <AreaGrid 
+      <FeaturedIn className="border-b border-slate-100" />
+      <AreaGrid
         title="Vastu Consultation Services Across Ghaziabad & NCR"
 
-  subtitle="Get professional Vastu consultation for homes, offices, plots & commercial spaces with practical guidance and accurate remedies."
+        subtitle="Get professional Vastu consultation for homes, offices, plots & commercial spaces with practical guidance and accurate remedies."
 
         variant="center"
         bgColor="bg-slate-50"
         areas={locations}
       />
-<TestimonialSection
-  items={testimonialsData}
+      <TestimonialSection
+        items={testimonialsData}
 
-  title="What Our Clients Say"
+        title="What Our Clients Say"
 
-  subtitle="Real experiences from people who transformed their spaces with Vastu consultation."
+        subtitle="Real experiences from people who transformed their spaces with Vastu consultation."
+      />
+      <FAQSection
+        title="Frequently Asked Questions"
 
-/>
-<FAQSection
-  title="Frequently Asked Questions"
+        subtitle="Get answers related to Vastu consultation, online analysis & Vastu remedies."
 
-  subtitle="Get answers related to Vastu consultation, online analysis & Vastu remedies."
+        items={vastuFaqs}
 
-  items={vastuFaqs}
-
-  bgClass="bg-theme-warm"
-/>
-      <CTAOne  buttonLink={createWhatsAppLink("professional Vastu consultation")} />
-
+        bgClass="bg-theme-warm"
+      />
+      <CTAOne
+        buttonLink={createWhatsAppLink("professional Vastu consultation")}
+      />
     </>
   );
 }

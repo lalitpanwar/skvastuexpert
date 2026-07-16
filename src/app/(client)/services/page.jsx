@@ -5,9 +5,9 @@ export default function ServicePage(){
 
     return(
         <>
-        <div className="py-5">
+    
      <ServiceCard items={servicesData}/>
-</div>
+
 
         </>
     )

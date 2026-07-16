@@ -12,7 +12,7 @@ import {
 
 import Link from "next/link";
 
-import CustomButton from "@/components/client/Layout/CustomButton";
+import CustomButton from "@/components/ui/custom/CustomButton";
 
 export default function AcharyaExpertise({
   badgeText = "Vastu",

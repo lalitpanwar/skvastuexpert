@@ -1,6 +1,6 @@
 "use client";
 import Container from "@/components/client/Layout/Container";
-import CustomButton from "@/components/client/Layout/CustomButton";
+import CustomButton from "@/components/ui/custom/CustomButton";
 import {
   BadgeCheck,
   History,

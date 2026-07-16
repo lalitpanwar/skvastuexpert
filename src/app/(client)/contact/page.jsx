@@ -12,7 +12,7 @@ import {
 
 import SectionLayout from "@/components/client/Layout/SectionLayout";
 import Container from "@/components/client/Layout/Container";
-import CustomButton from "@/components/client/Layout/CustomButton";
+import CustomButton from "@/components/ui/custom/CustomButton";
 
 import {
   createWhatsAppLink,
@@ -21,10 +21,10 @@ import {
 
 export default function ContactPage() {
   return (
-    <main className="bg-[#fffcf5] overflow-hidden">
+    <div className="bg-[#fffcf5] overflow-hidden">
       {/* HERO */}
       <section
-        className="relative pt-32 md:pt-40 pb-20 overflow-hidden"
+        className="relative pt-15 pb-20 overflow-hidden"
         style={{
           backgroundImage:
             "url('/images/white-patternchakra.png')",
@@ -291,6 +291,6 @@ export default function ContactPage() {
           </div>
         </div>
       </SectionLayout>
-    </main>
+    </div>
   );
 }

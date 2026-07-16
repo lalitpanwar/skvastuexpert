@@ -20,9 +20,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${roboto.variable}`}>
       <body
-        className={`bg-white dark:bg-background-dark font-sans text-[#1c160d] dark:text-white  antialiased`}
+        className={`dark:bg-background-dark font-sans text-[#1c160d] dark:text-white  antialiased`}
       >
-        <MainHeader />
+ 
         {children}
       </body>
       <GoogleTagManager gtmId="GTM-PDL6MKN9" />

@@ -32,18 +32,23 @@ export default function MainHeader() {
   return (
     <header
       className={` flex
-        fixed top-0 left-0 right-0
+fixed
+inset-x-0
+    h-20
 
-        z-[100]
+top-0
+border-b border-slate-200/70
+z-50
 
-        shadow-sm
+transition-all duration-300
 
-        transition-all duration-300
-
-        ${isScrolled ? "glass-header" : "bg-white dark:bg-zinc-900"}
+        ${isScrolled ? "glass-header shadow-md" : "bg-white shadow-none dark:bg-zinc-900"}
       `}
     >
-      <Container max="w-full" className="py-4 flex items-center justify-between">
+      <Container
+        max="w-full"
+        className="h-20 flex items-center justify-between"
+      >
         {/* LOGO */}
         <Link
           href="/"

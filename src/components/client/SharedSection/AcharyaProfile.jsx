@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import Container from "../Layout/Container";
 import Link from "next/link";
-import CustomButton from "../Layout/CustomButton";
+import CustomButton from "../../ui/custom/CustomButton";
 
 export default function AcharyaProfile({
   image = "/images/acharya-shivkumar-sharma.jpg",
