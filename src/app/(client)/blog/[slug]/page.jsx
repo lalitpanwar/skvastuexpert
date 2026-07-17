@@ -14,10 +14,12 @@ import { RELATED_POSTS_QUERY } from "@/sanity/lib/queries/RELATED_POSTS_QUERY";
 import RelatedPosts from "@/components/blog/RelatedPosts";
 import ShareButtons from "@/components/blog/ShareButtons";
 import Breadcrumb from "@/components/client/Shared/Breadcrumb";
-import { blogSingleBreadcrumb} from "@/lib/navigation/breadcrumb";
-import { generateArticleJsonLd } from "@/lib/seo/jsonLd";
-import Script from "next/script";
-
+import { blogSingleBreadcrumb } from "@/lib/navigation/breadcrumb";
+import { createMetadata } from "@/lib/seo";
+import JsonLd from "@/components/client/Shared/JsonLd";
+import { articleSchema, breadcrumbSchema, organizationSchema } from "@/lib/schema";
+import { getSiteConfig } from "@/lib/site";
+import { SEO_TYPES } from "@/lib/constants/seo";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -33,16 +35,28 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  return {
-    title: post.seo?.metaTitle || post.title,
-    description: post.seo?.metaDescription || post.excerpt,
-    openGraph: {
-      title: post.seo?.metaTitle || post.title,
-      description: post.seo?.metaDescription || post.excerpt,
-    },
-  };
+  // return {
+  //   title: post.seo?.metaTitle || post.title,
+  //   description: post.seo?.metaDescription || post.excerpt,
+  //   openGraph: {
+  //     title: post.seo?.metaTitle || post.title,
+  //     description: post.seo?.metaDescription || post.excerpt,
+  //   },
+  // };
 
+  return createMetadata({
+    seo: post.seo,
+    fallbackTitle: post.title,
 
+    fallbackDescription: post.excerpt,
+
+    fallbackImage: post.featuredImage,
+
+    path: `/blog/${post.slug.current}`,
+
+    type: SEO_TYPES.ARTICLE,
+    
+  }); 
 }
 
 export default async function BlogDetailsPage({ params }) {
@@ -53,29 +67,29 @@ export default async function BlogDetailsPage({ params }) {
     params: { slug },
   });
 
-  console.log("POST DATA", post)
-  
+  console.log("POST DATA", post);
+
   const { data: relatedPosts } = await sanityFetch({
     query: RELATED_POSTS_QUERY,
     params: {
       slug,
       categorySlug: post?.slug, //category reference dal rakhan hai esliye params k slug se hi kaam chal jayega
-    }
+    },
   });
 
   if (!post) {
     notFound();
   }
-const articleJsonLd = generateArticleJsonLd(post);
+const site = getSiteConfig();
   return (
     <>
- {/* //use next/script to escape dangerouslySetInnerHTML    */}
-<Script
-  id="article-schema"
-  type="application/ld+json"
->
-  {JSON.stringify(articleJsonLd)}
-</Script>
+
+<JsonLd
+data={[
+organizationSchema(site),
+articleSchema(site, post),
+breadcrumbSchema(site, blogSingleBreadcrumb(post.title))
+]} />
       <article className="py-10 md:py-16">
         <Container>
           <div className="rounded-2xl bg-white shadow-sm border border-slate-200 p-6 md:p-10">
@@ -88,7 +102,7 @@ const articleJsonLd = generateArticleJsonLd(post);
             <BlogPostMeta
               updatedAt={post.updatedAt || post.publishedAt}
               author={post.author}
-               content={post.content}
+              content={post.content}
             />
 
             <BlogFeaturedImage image={post.featuredImage} title={post.title} />
@@ -96,7 +110,7 @@ const articleJsonLd = generateArticleJsonLd(post);
             <div className="mt-12 ">
               <BlogContent content={post.content} />
             </div>
-<ShareButtons title={post.title} slug={post.slug} />
+            <ShareButtons title={post.title} slug={post.slug} />
             <AuthorCard author={post.author} />
           </div>
         </Container>
@@ -104,7 +118,7 @@ const articleJsonLd = generateArticleJsonLd(post);
 
       <RelatedPosts posts={relatedPosts} />
 
-<Breadcrumb items={blogSingleBreadcrumb(post.title)} />
+      <Breadcrumb items={blogSingleBreadcrumb(post.title)} />
     </>
   );
 }

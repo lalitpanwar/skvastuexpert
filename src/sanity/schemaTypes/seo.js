@@ -5,12 +5,28 @@ export const seoType = defineType({
   title: "SEO",
   type: "object",
 
+  groups: [
+    {
+      name: "basic",
+      title: "Basic",
+      default: true,
+    },
+    {
+      name: "advanced",
+      title: "Advanced",
+    },
+    {
+      name: "social",
+      title: "Social",
+    },
+  ],
+
   fields: [
     defineField({
       name: "metaTitle",
       title: "Meta Title",
       type: "string",
-      description: "Recommended: 50-60 characters",
+      group: "basic",
       validation: (Rule) => Rule.max(60),
     }),
 
@@ -19,14 +35,39 @@ export const seoType = defineType({
       title: "Meta Description",
       type: "text",
       rows: 3,
-      description: "Recommended: 150-160 characters",
+      group: "basic",
       validation: (Rule) => Rule.max(160),
     }),
 
     defineField({
-      name: "canonicalUrl",
+      name: "canonical",
       title: "Canonical URL",
       type: "url",
+      group: "advanced",
+    }),
+
+    defineField({
+      name: "keywords",
+      title: "Keywords",
+      type: "array",
+      of: [{ type: "string" }],
+      group: "advanced",
+    }),
+
+    defineField({
+      name: "noIndex",
+      title: "No Index",
+      type: "boolean",
+      initialValue: false,
+      group: "advanced",
+    }),
+
+    defineField({
+      name: "noFollow",
+      title: "No Follow",
+      type: "boolean",
+      initialValue: false,
+      group: "advanced",
     }),
 
     defineField({
@@ -36,19 +77,22 @@ export const seoType = defineType({
       options: {
         hotspot: true,
       },
+      group: "social",
     }),
 
     defineField({
-      name: "noIndex",
-      title: "No Index",
-      type: "boolean",
-      initialValue: false,
-      description: "Enable only if you don't want search engines to index this page.",
+      name: "twitterTitle",
+      title: "Twitter Title",
+      type: "string",
+      group: "social",
+    }),
+
+    defineField({
+      name: "twitterDescription",
+      title: "Twitter Description",
+      type: "text",
+      rows: 3,
+      group: "social",
     }),
   ],
-
-  options: {
-    collapsible: true,
-    collapsed: false,
-  },
 });

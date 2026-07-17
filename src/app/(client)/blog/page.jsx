@@ -7,8 +7,21 @@ import BlogHero from "@/components/blog/BlogHero";
 import { SectionLayout } from "@/components/client/Layout";
 import Breadcrumb from "@/components/client/Shared/Breadcrumb";
 import { blogBreadcrumb } from "@/lib/navigation/breadcrumb";
+import JsonLd from "@/components/client/Shared/JsonLd";
+import { webpageSchema, breadcrumbSchema } from "@/lib/schema";
+import { getSiteConfig } from "@/lib/site";
+import { createMetadata } from "@/lib/seo";
 
+export async function generateMetadata() {
+  return createMetadata({
+    fallbackTitle: "Blog - Vastu, Astrology articles and expert guidance",
 
+    fallbackDescription:
+      "Latest Vastu articles, tips and expert guidance.",
+
+    path: "/blog",
+  });
+}
 
 const POSTS_PER_PAGE = 9;
 
@@ -32,8 +45,24 @@ export default async function BlogPage({ searchParams }) {
 console.log("BLOG_PAGE", posts)
   const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
 
+  const site = getSiteConfig();
   return (
     <>
+
+    <JsonLd
+  data={[
+    webpageSchema({
+          site,
+            title: "Blog - Vastu, Astrology articles and expert guidance",
+
+    description:
+      "Latest Vastu articles, tips and expert guidance.",
+
+    path: "/blog",
+    }),
+    breadcrumbSchema(site, blogBreadcrumb()),
+  ]}
+/>
       <BlogHero />
 
     <SectionLayout>

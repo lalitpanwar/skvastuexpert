@@ -12,9 +12,21 @@ import CTAOne from "@/components/client/SharedSection/Cta/CtaOne";
 import { servicesData, testimonialsData, vastuFaqs } from "@/data";
 import { createWhatsAppLink } from "@/lib";
 import AcharyaExpertise from "@/components/client/PageSection/AcharyaExpertise";
+import JsonLd from "@/components/client/Shared/JsonLd";
+import { organizationSchema, websiteSchema, webpageSchema, localBusinessSchema } from "@/lib/schema";
+import { createMetadata } from "@/lib/seo/metadata";
+import { getSiteConfig } from "@/lib/site";
 
+export async function generateMetadata() {
+  return createMetadata({
+    fallbackTitle: "Home",
+    fallbackDescription:
+      "Professional Website Development Company",
+    path: "/",
+  });
+}
 
-export default function HomePage() {
+export default async function HomePage() {
   const rituals = [
     { id: 1, title: "Ganesh Puja", img: "ganesh.png", tag: "MOST REQUESTED" },
     { id: 2, title: "Satyanarayan Katha", img: "pandit.png", tag: "" },
@@ -56,8 +68,28 @@ export default function HomePage() {
       ],
     },
   ];
+
+  const site = await getSiteConfig();
+  
   return (
     <>
+        <JsonLd
+data={[
+organizationSchema(site),
+localBusinessSchema(site),
+websiteSchema(site),
+
+webpageSchema({
+site,
+    title: "Home",
+    description:
+      "Senior Vastu Consultant in Ghaziabad",
+    path: "/",
+})
+]}
+/>
+
+
       <HeroSection />
       <SectionIntro />
       <ServiceCard items={servicesData} />

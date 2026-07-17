@@ -1,20 +1,21 @@
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
-import { MainHeader } from "@/components/client/Shared";
+import { createMetadata } from "@/lib/seo";
+import { getSiteConfig } from "@/lib/site";
+
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"],
   variable: "--font-roboto",
 });
 
-export const metadata = {
-  title: "Shiv Kumar Sharma",
-  description: "Vastu Consultant in Rajnagar Ghaziabad",
-  verification: {
-    google: "ljy5nc5CmbF3vDujb6rfutmp2yfllTtYc416I6S1mOg",
-  },
-};
+const site = getSiteConfig();
+export const metadata = createMetadata({
+  fallbackTitle: site.name,
+  fallbackDescription: site.description,
+  path: "/",
+});
 
 export default function RootLayout({ children }) {
   return (
