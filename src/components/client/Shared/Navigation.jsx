@@ -46,7 +46,7 @@ export default function Navigation ({ open, setOpen }) {
                   </>
                 ) : (
                   <NavigationMenuLink className={cn(navigationMenuTriggerStyle(),"bg-transparent")} asChild>
-                  <Link href={item.href}  passHref> 
+                  <Link className="uppercase tracking-wide font-normal" href={item.href}  passHref> 
                     {item.title}
                   </Link>                                                                            
                   </NavigationMenuLink>
@@ -69,7 +69,7 @@ export default function Navigation ({ open, setOpen }) {
           <SheetContent side="left" className="w-[300px] overflow-y-auto bg-white">
             <SheetHeader>
               <SheetTitle className="text-left border-b pb-4 text-royal-blue font-sans">
-                Shubh Puja Menu
+                Menu
               </SheetTitle>
             </SheetHeader>
             
@@ -102,7 +102,7 @@ export default function Navigation ({ open, setOpen }) {
                     <Link
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="block px-2 py-3 font-medium text-gray-700 border-b border-zinc-50 hover:text-saffron"
+                      className="block px-2 py-3 font-normal uppercase tracking-wide text-gray-700 border-b border-zinc-50 hover:text-saffron"
                     >
                       {item.title}
                     </Link>
@@ -123,7 +123,7 @@ const ListItem = ({ title, href }) => (
     <NavigationMenuLink asChild>
       <Link
         href={href}
-        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-saffron/10 hover:text-saffron"
+        className=" block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-saffron/10 hover:text-saffron"
       >
         <span className="text-sm font-medium leading-none">{title}</span>
       </Link>

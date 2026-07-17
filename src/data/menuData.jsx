@@ -125,5 +125,8 @@
 export const menuData = [
   { title: "Home", href: "/", description: "" },
   { title: "Services", href: "/services", description: "" },
-{ title: "Contact", href: "contact", description: "" },
+    { title: "Gallery", href: "/gallery", description: "" },
+        { title: "Blog", href: "/blog", description: "" },
+
+{ title: "Contact", href: "/contact", description: "" },
 ]

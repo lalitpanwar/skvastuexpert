@@ -32,7 +32,6 @@ export default function ServiceCard({
           return (
             <Link key={i} href={item.whatsappLink} className="group block">
               <div className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:-translate-y-2 h-full flex flex-col">
-                
                 {/* IMAGE CONTAINER */}
                 <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
                   {/* Next.js Optimized Image (CSS Background ka replacement) */}
@@ -40,7 +39,10 @@ export default function ServiceCard({
                     src={item.image}
                     alt={item.title}
                     fill
-                    sizes="(max-w-7xl) 25vw, (max-w-md) 100vw, 50vw" // Browser ko sizing batane ke liye
+                    sizes="(max-width: 640px) 100vw,
+       (max-width: 1024px) 50vw,
+       (max-width: 1280px) 33vw,
+       25vw" // Browser ko sizing batane ke liye
                     className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
                     quality={75} // Image size ko optimize karne ke liye best standard
                   />
@@ -75,7 +77,6 @@ export default function ServiceCard({
                     </CustomButton>
                   </div>
                 </div>
-
               </div>
             </Link>
           );
