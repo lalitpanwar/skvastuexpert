@@ -19,9 +19,9 @@ import { getSiteConfig } from "@/lib/site";
 
 export async function generateMetadata() {
   return createMetadata({
-    fallbackTitle: "Home",
+    fallbackTitle: "Senior Vastu Consultant in Ghaziabad | Home, Office &amp; Commercial Vastu Expert",
     fallbackDescription:
-      "Professional Website Development Company",
+      "Consult the best Senior Vastu Consultant in Ghaziabad for home, office, plot, School and commercial spaces. Get practical Vastu remedies, online floor plan analysis and expert guidance by Acharya Shivkumar Sharma.",
     path: "/",
   });
 }
