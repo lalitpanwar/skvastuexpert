@@ -1,5 +1,3 @@
-"use client";
-
 import Container from "@/components/client/Layout/Container";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,10 +18,8 @@ export default function HeroSection() {
       className="relative bg-[#fffcf5] pt-15 pb-10 overflow-hidden"
       style={{
         backgroundImage: "url('/images/white-patternchakra.png')",
-
         backgroundRepeat: "repeat",
         backgroundPosition: "bottom",
-        backgroundAttachment: "fixed",
       }}
     >
       {/* Background Blur */}
@@ -57,17 +53,15 @@ export default function HeroSection() {
           shadow-[0_30px_80px_rgba(0,0,0,0.12)]
         "
                 >
-                  <Image
-                    src="/images/acharya-shivkumar-sharma.jpg"
-                    alt="Acharya ShivKumar Sharma"
-                    fill
-                    priority
-                    className="
-            object-cover object-top
-            transition-transform duration-700
-            group-hover:scale-105
-          "
-                  />
+<Image
+  src="/images/acharya-shivkumar-sharma.jpg"
+  alt="Acharya ShivKumar Sharma"
+  fill
+  priority
+  quality={85}
+  sizes="(max-width: 768px) 280px, (max-width: 1024px) 400px, 400px"
+  className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+/>
 
                   {/* Soft Overlay */}
                   <div
