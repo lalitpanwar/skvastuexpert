@@ -190,7 +190,7 @@ export default function HeroSection() {
 
             {/* Trust Points */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 px-4 md:px-0">
-              <TrustBox number="10+" text="Years Experience" />
+              <TrustBox number="25+" text="Years Experience" />
 
               <TrustBox number="1000+" text="Consultations" />
 
