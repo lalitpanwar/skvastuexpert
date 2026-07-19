@@ -31,7 +31,7 @@ export default function Acharya({ variant = "primary" }) {
           {/* Left Image Side */}
           <div className="lg:w-2/5 relative h-[500px] lg:h-auto group overflow-hidden">
             <img
-              alt="Acharya Shivkumar Sharma"
+              alt="Acharya Shiv kumar Sharma"
               className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
               src="images/acharya-shivkumar-sharma.jpg"
             />
@@ -44,7 +44,7 @@ export default function Acharya({ variant = "primary" }) {
               <h2 className="text-white text-2xl font-serif">
                 Acharya{" "}
                 <span className="text-success font-normal">
-                  Shivkumar Sharma
+                  Shiv kumar Sharma
                 </span>
               </h2>
             </div>
@@ -66,7 +66,7 @@ export default function Acharya({ variant = "primary" }) {
             </h2>
 
             <p className="text-slate-600 dark:text-zinc-400 text-lg leading-relaxed mb-10 italic border-l-4 border-secondary pl-6 font-serif">
-              "Acharya ShivKumar Sharma is a highly revered Vedic scholar
+              "Acharya Shiv Kumar Sharma is a highly revered Vedic scholar
               hailing from the sacred city of Varanasi. With over two decades of
               dedicated practice, he specializes in Karma Kanda, Jyotish
               Shastra, and Vastu Vidya."
