@@ -4,11 +4,13 @@ export function localBusinessSchema(site) {
 
     "@id": `${site.url}/#localbusiness`,
 
-    name: site.name,
+    name: site.businessName || site.name,
+
+    url: site.url,
 
     image: `${site.url}${site.logo}`,
 
-    url: site.url,
+    logo: `${site.url}${site.logo}`,
 
     telephone: site.phone,
 
@@ -18,24 +20,55 @@ export function localBusinessSchema(site) {
 
     address: {
       "@type": "PostalAddress",
-
-      streetAddress: "",
-
-      addressLocality: "Ghaziabad",
-
-      addressRegion: "Uttar Pradesh",
-
-      postalCode: "",
-
-      addressCountry: "IN",
+      streetAddress: site.address.street,
+      addressLocality: site.address.locality,
+      addressRegion: site.address.region,
+      postalCode: site.address.postalCode,
+      addressCountry: site.address.country,
     },
 
     areaServed: {
       "@type": "Country",
-
       name: "India",
     },
 
+    ...(site.geo?.latitude &&
+      site.geo?.longitude && {
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: site.geo.latitude,
+          longitude: site.geo.longitude,
+        },
+      }),
+
+    ...(site.sameAs?.length && {
+      sameAs: site.sameAs,
+    }),
+
+    ...(site.mapLink && {
+      hasMap: site.mapLink,
+    }),
+
     priceRange: "₹₹",
+
+    ...(site.openTime &&
+      site.closeTime && {
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday",
+            ],
+            opens: site.openTime,
+            closes: site.closeTime,
+          },
+        ],
+      }),
   };
 }

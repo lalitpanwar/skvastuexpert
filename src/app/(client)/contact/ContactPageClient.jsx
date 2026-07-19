@@ -184,7 +184,7 @@ ${formData.message}
                       </p>
 
                       <p className="text-slate-700 leading-relaxed">
-                        Sumanglam Building, Shop no. 305, Ground Floor, RDC, Raj Nagar, Ghaziabad - 201003
+                        Shiv Shankar Jyotish Evam Vastu Anusandhan Kendra, 281, Ansal Sumangalam Building, RDC, Raj Nagar Ghaziabad - 201002
                       </p>
                     </div>
                   </div>

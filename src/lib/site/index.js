@@ -1,5 +1,5 @@
 import { cache } from "react";
-import { client } from "@/sanity/lib/client";
+
 import { SETTINGS_QUERY } from "@/sanity/lib/queries";
 import { SITE_FALLBACK } from "./fallback";
 import { sanityFetch } from "@/sanity/lib/live";

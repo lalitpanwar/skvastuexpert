@@ -26,7 +26,7 @@ export function organizationSchema(site) {
 
     "@id": `${site.url}/#organization`,
 
-    name: site.name,
+    name: site.legalName || site.businessName || site.name,
 
     url: site.url,
 
@@ -40,12 +40,18 @@ export function organizationSchema(site) {
 
     telephone: site.phone,
 
-    sameAs: [
-      site.facebook,
-      site.instagram,
-      site.linkedin,
-      site.youtube,
-      site.twitter,
-    ].filter(Boolean),
+    sameAs: site.sameAs || [],
+
+contactPoint: [
+  {
+    "@type": "ContactPoint",
+    telephone: site.phone,
+    email: site.email,
+    contactType: "customer service",
+    areaServed: "IN",
+    availableLanguage: ["English", "Hindi"],
+     url: site.url,
+  },
+],
   };
 }

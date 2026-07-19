@@ -2,10 +2,10 @@ import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 export const footerData = {
   about: {
-    name: "Shivkumar",
+    name: "Shiv Kumar",
     surname: "Sharma",
     description:
-      "Professional Vastu consultation and practical guidance by Acharya Shivkumar Sharma. Helping homes, offices and commercial spaces achieve balance, positivity and prosperity across Ghaziabad & NCR.",
+      "Professional Vastu consultation and practical guidance by Acharya Shiv Kumar Sharma. Helping homes, offices and commercial spaces achieve balance, positivity and prosperity across Ghaziabad & NCR.",
     logoIconColor: "#d9a01a",
   },
   services: {
@@ -39,7 +39,7 @@ export const footerData = {
     ],
   },
   contact: {
-    address: "Shiv Shankar Jyotish Evam Vastu Anusandhan Kendra, Sumanglam Building, Shop no. 305, Ground Floor, RDC, Raj Nagar, Ghaziabad - 201003",
+    address: "Shiv Shankar Jyotish Evam Vastu Anusandhan Kendra, 281, Ansal Sumangalam Building, RDC, Raj Nagar Ghaziabad - 201002",
     phone: "+91 9811893069",
     email: "shivshankervastu@gmail.com",
     mapLink: "https://maps.app.goo.gl/a1eD7RsSvVZgkreP8",
