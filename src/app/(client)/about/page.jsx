@@ -7,9 +7,15 @@ import {
   personSchema,
 } from "@/lib/schema";
 import { aboutBreadcrumb } from "@/lib/navigation/breadcrumb";
-import AboutPageClient from "./AboutPageClient";
+import AboutPageClient from "./___AboutPageClient";
 import { getSiteConfig } from "@/lib/site";
 import Breadcrumb from "@/components/client/Shared/Breadcrumb";
+import HeroSection from "@/components/client/About/HeroSection";
+import OurStorySection from "@/components/client/About/OurStorySection";
+import PhilosophySection from "@/components/client/About/PhilosophySection";
+import JourneyTimelineSection from "@/components/client/About/JourneyTimelineSection";
+import GallerySection from "@/components/client/About/GallerySection";
+import AboutVastu from "@/components/client/About/AboutVastu";
 
 export function generateMetadata() {
   return createMetadata({
@@ -42,8 +48,8 @@ export default async function AboutPage() {
           breadcrumbSchema(site, aboutBreadcrumb()),
         ]}
       />
+      <AboutVastu />
 
-      <AboutPageClient />
        <Breadcrumb items={aboutBreadcrumb()} /> 
     </>
   );

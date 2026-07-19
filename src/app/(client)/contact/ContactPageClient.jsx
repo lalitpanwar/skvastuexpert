@@ -1,5 +1,5 @@
 "use client";
-
+import { useState } from "react";
 import Link from "next/link";
 import {
   Phone,
@@ -17,6 +17,63 @@ import CustomButton from "@/components/ui/custom/CustomButton";
 import { createWhatsAppLink, createCallLink } from "@/lib";
 
 export default function ContactPageClient() {
+  const [formData, setFormData] = useState({
+  name: "",
+  phone: "",
+  email: "",
+  property: "Home / Residence",
+  message: "",
+});
+const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  // Validation
+  if (!formData.name.trim()) {
+    alert("Please enter your name.");
+    return;
+  }
+
+  if (!formData.phone.trim()) {
+    alert("Please enter your phone number.");
+    return;
+  }
+
+  if (!/^[6-9]\d{9}$/.test(formData.phone)) {
+    alert("Please enter a valid 10-digit mobile number.");
+    return;
+  }
+
+  if (!formData.message.trim()) {
+    alert("Please enter your message.");
+    return;
+  }
+
+  const text = `*New Consultation Request*
+
+👤 Name: ${formData.name}
+
+📞 Phone: ${formData.phone}
+
+📧 Email: ${formData.email || "-"}
+
+🏠 Property: ${formData.property}
+
+📝 Message:
+${formData.message}
+`;
+
+  const phone = "919811893069";
+
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+  window.open(url, "_blank");
+};
   return (
     <>
       <div className="bg-[#fffcf5] overflow-hidden">
@@ -110,7 +167,7 @@ export default function ContactPageClient() {
                       </p>
 
                       <h4 className="text-base md:text-lg font-bold text-slate-900 break-all">
-                        contact@shivkumarsharma.com
+                        shivshankervastu@gmail.com
                       </h4>
                     </div>
                   </a>
@@ -127,7 +184,7 @@ export default function ContactPageClient() {
                       </p>
 
                       <p className="text-slate-700 leading-relaxed">
-                        Ghaziabad, Uttar Pradesh, India
+                        Sumanglam Building, Shop no. 305, Ground Floor, RDC, Raj Nagar, Ghaziabad - 201003
                       </p>
                     </div>
                   </div>
@@ -146,7 +203,7 @@ export default function ContactPageClient() {
                       <p className="text-slate-700 leading-relaxed">
                         Monday - Sunday
                         <br />
-                        8:00 AM - 9:00 PM
+                        10:00 AM - 8:00 PM
                       </p>
                     </div>
                   </div>
@@ -200,7 +257,7 @@ export default function ContactPageClient() {
                   </p>
                 </div>
 
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit}  className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-bold text-slate-700 mb-3">
@@ -208,8 +265,12 @@ export default function ContactPageClient() {
                       </label>
 
                       <input
-                        type="text"
-                        placeholder="Enter your name"
+                       required
+                          name="name"
+  value={formData.name}
+  onChange={handleChange}
+  type="text"
+  placeholder="Enter your name"
                         className="w-full h-14 rounded-2xl border border-slate-200 px-5 outline-none focus:border-primary transition-colors"
                       />
                     </div>
@@ -220,8 +281,12 @@ export default function ContactPageClient() {
                       </label>
 
                       <input
-                        type="tel"
-                        placeholder="Enter your number"
+                       required
+    name="phone"
+  value={formData.phone}
+  onChange={handleChange}
+  type="tel"
+  placeholder="Enter your number"
                         className="w-full h-14 rounded-2xl border border-slate-200 px-5 outline-none focus:border-primary transition-colors"
                       />
                     </div>
@@ -233,8 +298,12 @@ export default function ContactPageClient() {
                     </label>
 
                     <input
-                      type="email"
-                      placeholder="Enter your email"
+                    
+     name="email"
+  value={formData.email}
+  onChange={handleChange}
+  type="email"
+  placeholder="Enter your email"
                       className="w-full h-14 rounded-2xl border border-slate-200 px-5 outline-none focus:border-primary transition-colors"
                     />
                   </div>
@@ -244,7 +313,12 @@ export default function ContactPageClient() {
                       Property Type
                     </label>
 
-                    <select className="w-full h-14 rounded-2xl border border-slate-200 px-5 outline-none focus:border-primary transition-colors bg-white">
+                    <select
+                     required
+  name="property"
+  value={formData.property}
+  onChange={handleChange}
+                    className="w-full h-14 rounded-2xl border border-slate-200 px-5 outline-none focus:border-primary transition-colors bg-white">
                       <option>Home / Residence</option>
                       <option>Office / Workplace</option>
                       <option>Plot / Land</option>
@@ -262,13 +336,17 @@ export default function ContactPageClient() {
                     </label>
 
                     <textarea
-                      rows={6}
+                      name="message"
+  value={formData.message}
+  onChange={handleChange}
+  rows={6}
                       placeholder="Describe your requirement..."
                       className="w-full rounded-2xl border border-slate-200 px-5 py-4 outline-none focus:border-primary transition-colors resize-none"
                     />
                   </div>
 
                   <CustomButton
+                   type="submit"
                     variant="primary"
                     className="w-full h-14 rounded-2xl justify-center"
                     icon={ArrowRight}

@@ -4,7 +4,8 @@ export const footerData = {
   about: {
     name: "Shivkumar",
     surname: "Sharma",
-    description: "Professional Vastu consultation and practical guidance by Acharya Shivkumar Sharma. Helping homes, offices and commercial spaces achieve balance, positivity and prosperity across Ghaziabad & NCR.",
+    description:
+      "Professional Vastu consultation and practical guidance by Acharya Shivkumar Sharma. Helping homes, offices and commercial spaces achieve balance, positivity and prosperity across Ghaziabad & NCR.",
     logoIconColor: "#d9a01a",
   },
   services: {
@@ -25,35 +26,40 @@ export const footerData = {
       { name: "Gemstones", href: "/astrology/gemstones" },
     ],
     vastu: [
-      { name: "Home Audit", href: "/vastu/home" },
-      { name: "Office Vastu", href: "/vastu/office" },
-      { name: "Industrial Vastu", href: "/vastu/industrial" },
-      { name: "Bhoomi Pujan", href: "/vastu/bhoomi-pujan" },
-      { name: "Vastu Shanti", href: "/vastu/shanti" },
-      { name: "Interior Vastu", href: "/vastu/interior" },
-    ],
-    quickLinks: [
-      { name: "About Acharya Ji", href: "/about" },
-      { name: "Testimonials", href: "/#testimonials" },
-      { name: "Photo Gallery", href: "/gallery" },
-      { name: "Contact Us", href: "/contact" },
-      { name: "Daily Muhurta", href: "/muhurta" },
+      { name: "Home Audit", href: "#" },
+      { name: "Office Vastu", href: "#" },
+      { name: "Industrial Vastu", href: "#" },
+      { name: "Plot Vastu", href: "#" },
+
+      { name: "School/College Vastu", href: "#" },
+      { name: "Hospital Vastu", href: "#" },
+      { name: "Showrooms Vastu", href: "#" },
+      { name: "Bhoomi Pujan", href: "#" },
+      { name: "Vastu Shanti", href: "#" },
     ],
   },
   contact: {
-    address: "Shiv Shankar Jyotish Kendra, Raj Nagar, Ghaziabad, UP 201001",
+    address: "Shiv Shankar Jyotish Evam Vastu Anusandhan Kendra, Sumanglam Building, Shop no. 305, Ground Floor, RDC, Raj Nagar, Ghaziabad - 201003",
     phone: "+91 9811893069",
-    email: "contact@shivkumarsharma.com",
-    mapLink: "https://maps.google.com/?q=Raj+Nagar+Ghaziabad",
+    email: "shivshankervastu@gmail.com",
+    mapLink: "https://maps.app.goo.gl/a1eD7RsSvVZgkreP8",
   },
   socials: [
-    { Icon: Facebook, link: "https://facebook.com/your-profile" },
-    { Icon: Instagram, link: "https://instagram.com/your-profile" },
-    { Icon: Twitter, link: "https://twitter.com/your-profile" },
-    { Icon: Youtube, link: "https://youtube.com/your-channel" },
+    { Icon: Facebook, link: "https://www.facebook.com/SSAstroVastu" },
+    { Icon: Instagram, link: "https://www.instagram.com/astro_shivkumarsharma/" },
+    // { Icon: Twitter, link: "https://twitter.com/your-profile" },
+    // { Icon: Youtube, link: "https://youtube.com/your-channel" },
   ],
+  quickLinks: [
+    { name: "Home", href: "/" },
+    { name: "About Acharya Ji", href: "/about" },
+    { name: "Photo Gallery", href: "/gallery" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact Us", href: "/contact" },
+  ],
+
   legal: [
     { name: "Privacy", href: "/privacy-policy" },
     { name: "Terms", href: "/terms-of-service" },
-  ]
+  ],
 };

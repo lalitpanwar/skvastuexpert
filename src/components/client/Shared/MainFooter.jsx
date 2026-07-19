@@ -11,13 +11,13 @@ import { Container } from "../Layout";
 import { footerData } from "@/data/footer";
 
 export default function MainFooter() {
-  const { about, services, contact, socials, legal } = footerData;
+  const { about, services, contact, socials, quickLinks } = footerData;
 
   return (
     <footer
       className="
         relative
-
+tracking-wide
         bg-gradient-to-b
         from-[#111111]
         to-black
@@ -390,7 +390,7 @@ export default function MainFooter() {
         </div>
 
         {/* SEO GRID */}
-        <div
+        {/* <div
           className="
             py-10
 
@@ -462,7 +462,7 @@ export default function MainFooter() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* BOTTOM */}
         <div
@@ -490,7 +490,7 @@ export default function MainFooter() {
           </p>
 
           <div className="flex gap-6">
-            {legal.map((item) => (
+            {quickLinks.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
