@@ -359,7 +359,7 @@ const galleryImages = [
             </p>
             <p className="text-slate-600 leading-relaxed text-base ">
   Acharya ShivKumar Sharma is also a featured astrologer on HifiAstro.
-  <a className="text-primary" href="https://www.hifiastro.com/experts/acharya-shivkumar-sharma/">View his expert profile on HifiAstro</a>.
+  <a className="text-primary" href="https://www.hifiastro.com/experts/acharya-shivkumar-sharma/" title="View Profile">View his expert profile on HifiAstro</a>.
 </p>
 
             {/* Quick Stats Grid */}
