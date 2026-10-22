@@ -357,6 +357,10 @@ const galleryImages = [
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
               He believes that a balanced environment can trigger positive life transformations, leading to better health, wealth, and mental peace for the occupants.
             </p>
+            <p className="text-slate-600 leading-relaxed text-base ">
+  Acharya ShivKumar Sharma is also a featured astrologer on HifiAstro.
+  <a className="text-primary" href="https://www.hifiastro.com/experts/acharya-shivkumar-sharma/">View his expert profile on HifiAstro</a>.
+</p>
 
             {/* Quick Stats Grid */}
             <div className="grid grid-cols-2 gap-4 pt-4 max-w-md mx-auto lg:mx-0">

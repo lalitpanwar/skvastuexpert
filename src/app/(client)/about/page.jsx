@@ -19,9 +19,9 @@ import AboutVastu from "@/components/client/About/AboutVastu";
 
 export function generateMetadata() {
   return createMetadata({
-    fallbackTitle: "About Us - Acharya Shiv Kumar Sharma",
+    fallbackTitle: "About Us - Acharya ShivKumar Sharma",
     fallbackDescription:
-      "About Us - Acharya Shiv Kumar Sharma, Senior Vastu Consultant and Astro Vastu Expert in Ghaziabad.",
+      "About Us - Acharya ShivKumar Sharma, Senior Vastu Consultant and Astro Vastu Expert in Ghaziabad.",
     path: "/about",
   });
 }
@@ -39,9 +39,9 @@ export default async function AboutPage() {
 
           webpageSchema({
             site,
-            title: "About Us - Acharya Shiv Kumar Sharma",
+            title: "About Us - Acharya ShivKumar Sharma",
             description:
-              "About Us - Acharya Shiv Kumar Sharma, Senior Vastu Consultant and Astro Vastu Expert in Ghaziabad.",
+              "About Us - Acharya ShivKumar Sharma, Senior Vastu Consultant and Astro Vastu Expert in Ghaziabad.",
             path: "/about",
           }),
 
